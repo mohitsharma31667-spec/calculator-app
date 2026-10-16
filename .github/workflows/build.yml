@@ -22,10 +22,9 @@ jobs:
       id: buildozer
       with:
         command: buildozer -v android debug
-        subpath: '.'
 
-    - name: Upload APK Artifact
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: app-release
+        name: calculator-app
         path: bin/*.apk
